@@ -37,3 +37,13 @@ func GetValueOrElse[T AnyValue](value, replacement T) T {
 func PrintString(s string, a ...any) {
 	log.Printf(s+"\n", a)
 }
+
+// Returns nil if the values are equal, otherwise returns a pointer with the result of "value"
+func NullIf[T comparable](value, compareValue T) *T {
+	if value == compareValue {
+		return nil
+	}
+
+	return &compareValue
+}
+
