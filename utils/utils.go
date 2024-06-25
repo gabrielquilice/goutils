@@ -44,6 +44,6 @@ func NullIf[T comparable](value, compareValue T) *T {
 		return nil
 	}
 
-	return &compareValue
+	return &value
 }
 
